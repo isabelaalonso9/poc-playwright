@@ -1,5 +1,5 @@
 const {test, chromium} = require('@playwright/test');
-const { PortalPage } = require('../pages/portal');
+const { PortalPage } = require('../pages/Portal');
 
 test.skip('Cria boleta', async({ page })  => {
 
