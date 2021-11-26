@@ -7,8 +7,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx playwright test --headed --config=playwright.conf.js",
-    "test:headless": "npx playwright test"
+    "test": "npx playwright test --headed --config=playwright.conf.js --reporter=list,experimental-allure-playwright",
+    "test:headless": "npx playwright test",
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open ./allure-report",
+    "allure:serve": "npx allure serve"
   },
   "repository": {
     "type": "git",
@@ -23,7 +26,9 @@
   "homepage": "https://github.com/cassiosilva93/poc-playwright#readme",
   "devDependencies": {
     "@playwright/test": "^1.16.3",
+    "allure-commandline": "^2.13.8",
     "cpf-cnpj-validator": "^1.0.3",
+    "experimental-allure-playwright": "0.0.3",
     "playwright": "^1.16.3"
   }
 }
