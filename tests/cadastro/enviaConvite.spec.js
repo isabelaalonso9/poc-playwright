@@ -7,11 +7,10 @@ const { cpf, cnpj } = require('cpf-cnpj-validator');
 const credenciais = require('../fixtures/credenciais.json');
 const personas = require('../fixtures/personas.json');
 
-const email = geraEmailFake();
-
 let cpfDocument;
 let cnpjDocument;
 let envioConvite;
+let email;
 
 test.describe('Envio de convite', () => {
   test.beforeEach(async ({ page }) => {
@@ -19,6 +18,7 @@ test.describe('Envio de convite', () => {
     cpfDocument = cpf.generate();
     cnpjDocument = cnpj.generate();
     envioConvite = new EnvioConvitePage(page);
+    email = geraEmailFake();
 
     await page.goto("https://portaluat.vortx.com.br/");
     await portal.login(credenciais.valida.cpf, credenciais.valida.senha);

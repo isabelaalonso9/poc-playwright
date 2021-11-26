@@ -1,5 +1,5 @@
 module.exports = {
-  timeout: 15000,
+  timeout: 30000,
   use: {
     viewport: {
       width: 1920,
