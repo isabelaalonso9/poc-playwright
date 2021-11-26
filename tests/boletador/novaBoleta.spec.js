@@ -1,7 +1,7 @@
 const {test, chromium} = require('@playwright/test');
-const { logaPortalPage } = require('./portal');
+const { PortalPage } = require('../pages/portal');
 
-test('Cria boleta', async({ page })  => {
+test.skip('Cria boleta', async({ page })  => {
 
   await page.setViewportSize({ width: 1600, height: 1200 });
 
@@ -9,7 +9,7 @@ test('Cria boleta', async({ page })  => {
     headless:false
   });
 
-  const loginPage = new logaPortalPage(page);
+  const loginPage = new PortalPage(page);
 
   loginPage.login('91808826094', '222333');
 
