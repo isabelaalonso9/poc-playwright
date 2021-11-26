@@ -1,6 +1,28 @@
 {
-    "devDependencies": {
-        "@playwright/test": "^1.16.3",
-        "playwright": "^1.16.3"
-    }
+  "name": "poc-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cassiosilva93/poc-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cassiosilva93/poc-playwright/issues"
+  },
+  "homepage": "https://github.com/cassiosilva93/poc-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.16.3",
+    "cpf-cnpj-validator": "^1.0.3",
+    "playwright": "^1.16.3"
+  }
 }
