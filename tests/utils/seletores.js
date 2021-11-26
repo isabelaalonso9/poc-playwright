@@ -22,6 +22,7 @@ const seletores = {
     emailInput: '.form-material > :nth-child(2) > .form-control',
     enviaConviteButton: 'div[class="form-group form-default"] button',
     conviteSucessoText: '#swal2-content',
+    tipoPersonaInput: 'select[formcontrolname="type"]',
   },
 }
 

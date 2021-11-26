@@ -1,4 +1,4 @@
-const { seletores } = require('../seletores');
+const { seletores } = require('../utils/seletores');
 
 class PortalPage {
   constructor(page) {
