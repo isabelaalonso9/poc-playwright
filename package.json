@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "npx playwright test --headed --config=playwright.conf.js --reporter=list,experimental-allure-playwright",
+    "jest": "jest --colors --passWithNoTests",
     "test:headless": "npx playwright test",
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open ./allure-report",
@@ -25,10 +26,26 @@
   },
   "homepage": "https://github.com/cassiosilva93/poc-playwright#readme",
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
+    "@babel/runtime": "^7.16.3",
     "@playwright/test": "^1.16.3",
     "allure-commandline": "^2.13.8",
+    "babel-jest": "^27.3.1",
     "cpf-cnpj-validator": "^1.0.3",
+    "expect-playwright": "^0.8.0",
     "experimental-allure-playwright": "0.0.3",
+    "fs-extra": "^10.0.0",
+    "jest": "^27.3.1",
+    "jest-circus": "^27.3.1",
+    "jest-extended": "^1.2.0",
+    "jest-html-reporters": "^2.1.6",
+    "jest-playwright-preset": "^1.7.0",
     "playwright": "^1.16.3"
-  }
+  },
+  "dependencies": {}
 }

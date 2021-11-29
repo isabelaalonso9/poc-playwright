@@ -1,5 +1,8 @@
 node_modules
 
-# Allure Report
+# Reports
 allure-results
 allure-report
+reports
+
+screenshots

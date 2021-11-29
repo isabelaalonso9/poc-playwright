@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { expect } = require('@playwright/test');
 const { PortalPage } = require('../pages/Portal');
 const { seletores } = require('../utils/seletores');
 const { EnvioConvitePage } = require('../pages/EnvioConvite');
@@ -12,13 +12,10 @@ let cnpjDocument;
 let envioConvite;
 let email;
 
-test.describe('Envio de convite', () => {
-  test.beforeEach(async ({ page }) => {
+describe('Envio de convite', () => {
+  beforeAll(async () => {
     const portal = new PortalPage(page);
-    cpfDocument = cpf.generate();
-    cnpjDocument = cnpj.generate();
     envioConvite = new EnvioConvitePage(page);
-    email = geraEmailFake();
 
     await page.goto("https://portaluat.vortx.com.br/");
     await portal.login(credenciais.valida.cpf, credenciais.valida.senha);
@@ -26,7 +23,14 @@ test.describe('Envio de convite', () => {
     await page.goto("https://vxcadastrouat.vortx.com.br/");
   })
 
-  test('Deve ser possível enviar um convite para uma pessoa física', async ({ page }) => {
+  beforeEach(async () => {
+    cpfDocument = cpf.generate();
+    cnpjDocument = cnpj.generate();
+    email = geraEmailFake();
+    await page.goto("https://vxcadastrouat.vortx.com.br/");
+  })
+
+  it('Deve ser possível enviar um convite para uma pessoa física', async () => {
     await envioConvite.enviarConvite(cpfDocument, email, false)
 
     const result = page.locator(seletores.envioConvitePage.conviteSucessoText)
@@ -34,7 +38,7 @@ test.describe('Envio de convite', () => {
   })
 
   personas.forEach((persona) => {
-    test(`Deve ser possível enviar um convite para um ${persona}`, async ({ page }) => {
+    it(`Deve ser possível enviar um convite para um ${persona}`, async () => {
       await envioConvite.enviarConvite(cnpjDocument, email, true, persona)
 
       const result = page.locator(seletores.envioConvitePage.conviteSucessoText)

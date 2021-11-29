@@ -1,7 +1,7 @@
-const {test, chromium} = require('@playwright/test');
+const { chromium} = require('@playwright/test');
 const { PortalPage } = require('../pages/Portal');
 
-test.skip('Cria boleta', async({ page })  => {
+it('Cria boleta', async({ page })  => {
 
   await page.setViewportSize({ width: 1600, height: 1200 });
 
