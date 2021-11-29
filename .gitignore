@@ -1,3 +1,4 @@
+# Dependency directories
 node_modules
 
 # Reports
@@ -5,4 +6,8 @@ allure-results
 allure-report
 reports
 
+# Logs
 screenshots
+
+# Dotenv environment 
+.env

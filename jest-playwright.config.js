@@ -1,3 +1,5 @@
+const headless = process.env.TYPE ? true : false
+
 module.exports = {
   browsers: ['chromium'],
   launchOptions: {
@@ -8,6 +10,6 @@ module.exports = {
       '--disable-gpu',
       '--disable-dev-shm-usage'
     ],
-    headless: false
+    headless
   }
 }

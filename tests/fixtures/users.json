@@ -1,10 +1,10 @@
 {
-  "valida": {
-    "cpf": "18548100656",
-    "senha": "123456"
+  "valid": {
+    "document": "18548100656",
+    "password": "123456"
   },
-  "invalida": {
-    "cpf": "00000000000",
-    "senha": "000000"
+  "invalid": {
+    "document": "00000000000",
+    "password": "000000"
   }
 }

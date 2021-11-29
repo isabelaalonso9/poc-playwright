@@ -18,7 +18,7 @@ describe('Envio de convite', () => {
     envioConvite = new EnvioConvitePage(page);
 
     await page.goto("https://portaluat.vortx.com.br/");
-    await portal.login(credenciais.valida.cpf, credenciais.valida.senha);
+    await portal.login(credenciais.valid.document, credenciais.valid.password);
     await page.locator(seletores.escolhaProdutos.bemVindoText).waitFor();
     await page.goto("https://vxcadastrouat.vortx.com.br/");
   })
