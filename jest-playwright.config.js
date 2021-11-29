@@ -1,4 +1,4 @@
-// const headless = process.env.TYPE ? true : false
+const headless = process.env.TYPE ? true : false
 
 module.exports = {
   browsers: ['chromium'],
@@ -10,6 +10,6 @@ module.exports = {
       '--disable-gpu',
       '--disable-dev-shm-usage'
     ],
-    headless: false
+    headless
   }
 }
