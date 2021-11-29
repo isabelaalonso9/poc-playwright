@@ -1,0 +1,8 @@
+{
+  "loginFailure": "Usuário e senha não conferem ou o usuário está bloqueado!",
+  "loginSuccessfully": "Login realizado",
+  "getDecryptTokenFailure": "An error occurred whilst processing your request",
+  "fileNonexistent": "Object reference not set to an instance of an object.",
+  "unsupportedMediaType": "UnsupportedMediaType",
+  "inviteExists": "Invite already exists"
+}

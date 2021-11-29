@@ -1,11 +1,11 @@
 const { expect } = require('@playwright/test');
 const { PortalPage } = require('../pages/Portal');
-const { seletores } = require('../utils/seletores');
+const { seletores } = require('../seletores');
 const { EnvioConvitePage } = require('../pages/EnvioConvite');
-const { geraEmailFake } = require('../utils/helpers');
+const { geraEmailFake } = require('../../lib/generateRandomEmail');
 const { cpf, cnpj } = require('cpf-cnpj-validator');
-const credenciais = require('../fixtures/credenciais.json');
-const personas = require('../fixtures/personas.json');
+const credenciais = require('../../fixtures/users.json');
+const personas = require('../../fixtures/companiesTypes.json');
 
 let cpfDocument;
 let cnpjDocument;

@@ -8,6 +8,6 @@ module.exports = {
       '--disable-gpu',
       '--disable-dev-shm-usage'
     ],
-    headless: true
+    headless: false
   }
 }

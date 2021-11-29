@@ -1,4 +1,4 @@
-const { seletores } = require('../utils/seletores');
+const { seletores } = require('../seletores');
 
 class EnvioConvitePage {
   constructor(page) {
