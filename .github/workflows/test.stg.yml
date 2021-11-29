@@ -39,10 +39,10 @@ jobs:
       - name: Install modules
         run: npm install -f
 
-      - name: Test
+      - name: Test e2e
         run: npm run test:e2e
 
-      - name: Test
+      - name: Test api
         run: npm run test:api_uat
 
       - name: Save Jest HTML report
