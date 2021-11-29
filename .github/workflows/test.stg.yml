@@ -41,3 +41,17 @@ jobs:
 
       - name: Test
         run: npm run jest
+
+      - name: Save Jest HTML report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: jest-report
+          path: reports
+
+      - name: Save screenshots in case of failure
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: failure-screenshots
+          path: screenshots
