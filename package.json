@@ -38,6 +38,8 @@
     "allure-commandline": "^2.13.8",
     "babel-jest": "^27.3.1",
     "cpf-cnpj-validator": "^1.0.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "expect-playwright": "^0.8.0",
     "experimental-allure-playwright": "0.0.3",
     "faker": "^5.5.3",
@@ -50,9 +52,7 @@
     "joi": "^17.4.2",
     "mongodb": "^3.6.9",
     "playwright": "^1.16.3",
-    "supertest": "^6.1.6",
-    "dotenv": "^10.0.0"
+    "supertest": "^6.1.6"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
