@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "npx playwright test --headed --config=playwright.conf.js --reporter=list,experimental-allure-playwright",
-    "test:ci-e2e-uat": "jest --colors --passWithNoTests TYPE=e2e --testPathPattern=tests/e2e/",
+    "test:ci-e2e-uat": "cross-env --colors --passWithNoTests TYPE=e2e --testPathPattern=tests/e2e/",
     "test:ci-api-uat": "cross-env jest LAUNCH_URL=uat TYPE=api --passWithNoTests --testPathPattern=tests/api",
     "test:headless": "npx playwright test",
     "allure:generate": "npx allure generate ./allure-results --clean",
