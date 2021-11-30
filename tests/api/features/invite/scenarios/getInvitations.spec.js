@@ -16,6 +16,8 @@ let connectionDb;
 let tokenGenerated;
 let userIdGenerated;
 
+console.log(getConnectionStringDatabase().vxCadastro);
+
 DatabaseConnection.setConfig({
   url: getConnectionStringDatabase().vxCadastro,
   databaseName: 'VxCadastro',

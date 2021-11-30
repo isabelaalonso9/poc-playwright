@@ -39,8 +39,8 @@ jobs:
       - name: Install modules
         run: npm install -f
 
-      - name: Test e2e
-        run: npm run test:ci-e2e-uat
+      # - name: Test e2e
+      #   run: npm run test:ci-e2e-uat
 
       - name: Test api
         run: npm run test:ci-api-uat
