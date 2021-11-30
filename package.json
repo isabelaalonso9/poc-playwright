@@ -10,7 +10,7 @@
     "test:e2e": "jest --colors --passWithNoTests --testPathPattern=tests/e2e",
     "test:e2e-uat": "cross-env TYPE=e2e jest --colors --passWithNoTests --testPathPattern=tests/e2e",
     "test:api-uat": "cross-env LAUNCH_URL=uat TYPE=api jest --passWithNoTests --testPathPattern=tests/api",
-    "test:ci-uat": "npm run test:e2e-uat && npm run test:api-uat"
+    "test:ci-uat": "cross-env LAUNCH_URL=uat TYPE=test jest --passWithNoTests --testPathPattern=tests"
   },
   "repository": {
     "type": "git",
