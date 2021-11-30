@@ -1,8 +1,9 @@
 module.exports = {
-    timeout: 8000,
-    use: {
-        viewport: { width: 1280, height: 720 },
-        
-    }
-    
-}
+  timeout: 30000,
+  use: {
+    viewport: {
+      width: 1920,
+      height: 1080,
+    },
+  },
+};
