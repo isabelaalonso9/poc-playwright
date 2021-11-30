@@ -7,13 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx playwright test --headed --config=playwright.conf.js --reporter=list,experimental-allure-playwright",
-    "test:ci-e2e-uat": "cross-env TYPE=e2e jest --colors --passWithNoTests --testPathPattern=tests/e2e",
-    "test:ci-api-uat": "cross-env LAUNCH_URL=uat TYPE=api jest --passWithNoTests --testPathPattern=tests/api",
-    "test:headless": "npx playwright test",
-    "allure:generate": "npx allure generate ./allure-results --clean",
-    "allure:open": "npx allure open ./allure-report",
-    "allure:serve": "npx allure serve"
+    "test:e2e": "jest --colors --passWithNoTests --testPathPattern=tests/e2e",
+    "test:e2e-uat": "cross-env TYPE=e2e jest --colors --passWithNoTests --testPathPattern=tests/e2e",
+    "test:api-uat": "cross-env LAUNCH_URL=uat TYPE=api jest --passWithNoTests --testPathPattern=tests/api",
+    "test:ci-uat": "npm run test:e2e-uat && npm run test:api-uat"
   },
   "repository": {
     "type": "git",
