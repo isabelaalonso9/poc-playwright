@@ -1,7 +1,7 @@
 const {test, chromium} = require('@playwright/test');
-const { logaPortalPage } = require('./portal');
+const { PortalPage } = require('../pages/Portal');
 
-test('Entra no Portal e clica no Vórtx One', async({ page })  => {
+test.skip('Cria boleta', async({ page })  => {
 
   await page.setViewportSize({ width: 1600, height: 1200 });
 
@@ -9,7 +9,7 @@ test('Entra no Portal e clica no Vórtx One', async({ page })  => {
 //    headless:false
 //  });
 
-  const loginPage = new logaPortalPage(page);
+  const loginPage = new PortalPage(page);
 
   loginPage.login('48786485890', '881952');
 
